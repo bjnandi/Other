@@ -1,0 +1,46 @@
+1) Create a new instance for Jenkins server
+
+2) Install JDK :
+	sudo apt-get update
+	sudo apt install openjdk-11-jre-headless
+
+3) Add the key to your system
+	sudo apt-get install wget
+	wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
+
+4) Add a Jenkins apt repository entry
+
+	sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+
+5) Install jenkins 
+	sudo apt-get update
+	sudo apt-get install jenkins 
+
+6) Give jenkins a administration privileges
+	Open the file /etc/sudoers
+	sudo nano /etc/sudoers
+
+7) add the following line at the end of the file
+	jenkins ALL=(ALL) NOPASSWD: ALL
+
+8) Open Jenkins dashboard on browser using the compute engines public IP on port 8080
+	(http://<server_publicIP>:8080) 
+
+9) sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+	sudo service jenkins stop
+	sudo service jenkins start
+
+	ssh-keygen -f  rra -f for_jenkina_key (ssh key gen)
+	cat for_jenkina_key.pub>authorized_keys (authorized copy)
+
+10) sudo apt-get remove --purge jenkins
+
+
+Install, Build triggers, Cron syntax,  Git integration, Artifacts, Build pipeline view, Parameterized jobs,  Security, Backups and config history, Nodes on GCP Compute engine with SSH,  Uninstall Jenkins
+
+
+https://www.udemy.com/course/continuous-integration-with-jenkins/

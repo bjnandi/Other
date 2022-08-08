@@ -1,0 +1,18 @@
+1) ls
+2) pwd
+3) cd
+4) nano
+5) cat
+6) clear
+7) rm 
+8) mkdir
+9) wget
+10) curl -O 
+11) cp 
+12) ".." back dir
+12) zip cloud-function.zip requirements.txt main.py
+13) curl ifconfig.me
+14) lsblk
+15) mkfs -t ext4 /dev/xvdf
+16) mount /dev/xvdf /test/    umount /dev/xvdf /test/
+17) sudo nautilus  (root file see on ubuntu)

@@ -1,0 +1,30 @@
+https://www.git-scm.com/
+git --version
+git config --global user.name "Biswajit"
+git config --global user.email "nbiswajit94@gmail.com"
+mkdir myproject
+cd myproject
+git init 
+nano index.html
+git add index.html
+git add --all
+git status
+git commit -m "First release of Hello World!"
+git log
+git branch hello-world-images
+git branch
+git checkout hello-world-images
+git checkout master
+git merge hello-world-images
+git branch -d hello-world-images
+git status
+
+
+
+git remote add origin https://github.com/bjnandi/git-test.git
+
+git pull origin
+
+git push origin
+
+git log --oneline
