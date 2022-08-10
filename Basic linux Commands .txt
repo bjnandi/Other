@@ -16,3 +16,24 @@
 15) mkfs -t ext4 /dev/xvdf
 16) mount /dev/xvdf /test/    umount /dev/xvdf /test/
 17) sudo nautilus  (root file see on ubuntu)
+--------------------------------------------------------------------
+who
+whoami
+date
+cal
+ls -a
+/ root
+~ tilde
+cp -r test text
+cp test.txt test1.txt
+cp text11 /home/bjnandi/Desktop/
+
+gedit
+history
+passwd Biswajit
+touch, nano, vi
+rmdir
+rm test
+rm -r test
+exit
+shtudown -h now
