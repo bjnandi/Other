@@ -28,3 +28,4 @@ git pull origin
 git push origin
 
 git log --oneline
+git branch –d test
