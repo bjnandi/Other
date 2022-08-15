@@ -1,39 +1,51 @@
 1) ls
-2) pwd
-3) cd
-4) nano
-5) cat
-6) clear
-7) rm 
-8) mkdir
-9) wget
-10) curl -O 
-11) cp 
-12) ".." back dir
-12) zip cloud-function.zip requirements.txt main.py
-13) curl ifconfig.me
-14) lsblk
-15) mkfs -t ext4 /dev/xvdf
-16) mount /dev/xvdf /test/    umount /dev/xvdf /test/
-17) sudo nautilus  (root file see on ubuntu)
---------------------------------------------------------------------
-who
-whoami
-date
-cal
-ls -a
+2) ls -a
+3) ll
+4) pwd
+5) cd
+6) touch, nano, vi
+7) cat
+8) clear
+9) rm 
+10) mkdir
+11) wget
+12) curl -O 
+13) cp 
+14) ".." back dir
+15) man
+16) who
+17) whcich 
+18) whoami
+19) date
+20) cal
+21) history
+22) mv
+23) rmdir
+24) gedit
+25) exit
+
 / root
 ~ tilde
+
+zip cloud-function.zip requirements.txt main.py
+curl ifconfig.me
+lsblk
+mkfs -t ext4 /dev/xvdf
+mount /dev/xvdf /test/    umount /dev/xvdf /test/
+sudo nautilus  (root file see on ubuntu)
 cp -r test text
 cp test.txt test1.txt
 cp text11 /home/bjnandi/Desktop/
-
-gedit
-history
 passwd Biswajit
-touch, nano, vi
-rmdir
-rm test
 rm -r test
-exit
 shtudown -h now
+
+Remort login
+--------------------------------
+sudo apt install openssh-server
+sudo service ssh status
+ssh-keygen
+cd /home/bjnandi/.ssh
+ssh-copy-id  bjnandi@192.168.0.4
+ssh bjnandi@192.168.0.4
+exit
