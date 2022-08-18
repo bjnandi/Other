@@ -38,6 +38,7 @@ cp test.txt test1.txt
 cp text11 /home/bjnandi/Desktop/
 passwd Biswajit
 rm -r test
+rm -rf cv
 shtudown -h now
 
 Remort login
