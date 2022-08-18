@@ -41,6 +41,9 @@ rm -r test
 rm -rf cv
 shtudown -h now
 
+COPY .  /var/www/html/
+
+
 Remort login
 --------------------------------
 sudo apt install openssh-server
