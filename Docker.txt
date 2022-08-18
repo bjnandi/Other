@@ -1,0 +1,60 @@
+1) sudo yum update
+
+2) sudo yum install docker
+ 
+3) sudo yum info docker
+ 
+4) pip3 install --user docker-compose
+ 
+5) sudo systemctl enable docker.service
+ 
+6) sudo systemctl start docker.service
+ 
+7) sudo systemctl status docker.service
+
+8) docker version
+ 
+9) docker-compose version
+ 
+10) mkdir static-website-1 && cd static-website-1
+
+11) echo 'Docker Apache static site by nixCraft' > index.html
+
+12) vim Dockerfile
+
+	FROM centos:centos7
+
+	# Install apache2 with less
+	RUN yum -y update && \
+	yum -y install httpd && \
+	yum clean all
+	 
+	# Sample index.html for test 
+	COPY index.html /var/www/html/index.html
+	# COPY . /var/www/html/
+	 
+	# Port and set entry point for container 
+	EXPOSE 80
+	ENTRYPOINT /usr/sbin/httpd -DFOREGROUND
+	
+13) sudo docker build -t staticsite01 .
+
+14) sudo docker images
+
+15) sudo docker run -d -p 80:80 --name staticsite01 staticsite01
+
+16) sudo docker ps
+
+17) sudo docker port staticsite01
+
+18) curl 127.0.0.1:80
+
+19) docker help
+
+20) man docker-build
+
+21) sudo docker ps -a
+
+22) sudo docker rmi -f feb5d9fea6a5
+
+23) sudo docker stop my_container
