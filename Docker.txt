@@ -55,6 +55,8 @@
 
 21) sudo docker ps -a
 
-22) sudo docker rmi -f feb5d9fea6a5
+22) sudo docker stop my_container
 
-23) sudo docker stop my_container
+23) sudo docker rmi -f image_name
+
+
