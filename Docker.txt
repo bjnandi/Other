@@ -57,9 +57,11 @@
 
 22) sudo docker stop my_container
 
-23) sudo docker rmi -f image_name
+23) sudo docker rm -f container_id
 
-24) sudo docker exec -it "container ID" sh or bash
+24) sudo docker rmi -f image_name
+
+25) sudo docker exec -it "container ID" sh or bash
 	 docker exec -it b65182422811 bash
 
 
