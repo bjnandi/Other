@@ -1,0 +1,19 @@
+1) mysql -u root -p
+
+2) SHOW DATABASES;
+
+3) CREATE DATABASE database_name ;
+
+4) use database_name
+
+5) SHOW TABLES;
+
+6) CREATE TABLE MyGuests (
+	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	firstname VARCHAR(30) NOT NULL,
+	lastname VARCHAR(30) NOT NULL,
+	email VARCHAR(50),
+	reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+	);
+
+7) desc MyGuests;
