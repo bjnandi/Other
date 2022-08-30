@@ -23,6 +23,7 @@
 23) rmdir
 24) gedit
 25) exit
+26) sudo apt-get install tzdata
 
 / root
 ~ tilde
