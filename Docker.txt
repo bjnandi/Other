@@ -63,5 +63,6 @@
 
 25) sudo docker exec -it "container ID" sh or bash
 	 docker exec -it b65182422811 bash
-
+	 
+26) docker-compose up -d
 
