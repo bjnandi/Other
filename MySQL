@@ -6,6 +6,9 @@
 
 4) use database_name
 
+4.1) source /var/www/database.sql (import)
+
+
 5) SHOW TABLES;
 
 6) CREATE TABLE MyGuests (
@@ -17,3 +20,6 @@
 	);
 
 7) desc MyGuests;
+
+8) sudo apt install mysql-server
+9) sudo service mysql status
