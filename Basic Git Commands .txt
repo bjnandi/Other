@@ -31,10 +31,25 @@ git push origin --force master
 git log --oneline
 git branch –d test
 
-
+====================================================================================
+CodeCommit HTTPS connection
 -------------------------------
-<b>CodeCommit SSH connection </b>
-
+1) Add Users
+2) Put User name
+3) Select AWS credential type
+    Access key - Programmatic access
+    
+4) Add Permissions
+    AWSCodeCommitPowerUser
+    
+5) Create user
+6) Create Access key from Security credentials Tab 
+7) Copy
+    Access key ID
+    Secret access key
+    
+CodeCommit SSH connection
+-------------------------------
 1) ssh-keygen
 2) cd .ssh
 3) cat rsa.pub
@@ -49,3 +64,5 @@ git branch –d test
 9) git add --all
 10) git commit -m "First release of Hello World!"
 11) git push -u origin main
+
+
