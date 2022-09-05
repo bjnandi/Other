@@ -30,3 +30,22 @@ git push origin --force master
 
 git log --oneline
 git branch –d test
+
+
+-------------------------------
+<b>CodeCommit SSH connection </b>
+
+1) ssh-keygen
+2) cd .ssh
+3) cat rsa.pub
+4) Upload SSH public key
+5) Copy SSH Key ID
+6) notepad ~/.ssh/config
+    Host git-codecommit.*.amazonaws.com
+    User {my SSH Key ID}
+    IdentityFile ~/.ssh/codecommit_rsa
+7) ssh git-codecommit.ap-south-1.amazonaws.com
+8) ssh://git-codecommit.ap-south-1.amazonaws.com/v1/repos/glue-laravel
+9) git add --all
+10) git commit -m "First release of Hello World!"
+11) git push -u origin main
