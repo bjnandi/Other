@@ -1,5 +1,6 @@
 https://www.git-scm.com/
 git --version
+git config --list
 git config --global user.name "Biswajit"
 git config --global user.email "nbiswajit94@gmail.com"
 mkdir myproject
@@ -20,6 +21,7 @@ git branch -d hello-world-images
 git status
 
 
+git remote -v
 
 git remote add origin https://github.com/bjnandi/git-test.git
 
@@ -30,6 +32,7 @@ git push origin --force master
 
 git log --oneline
 git branch –d test
+
 
 ====================================================================================
 CodeCommit HTTPS connection
