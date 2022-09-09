@@ -29,6 +29,7 @@ git remote remove [remote name]
 vi .git/config
 git config --global --edit
 git config --global --unset core.excludesfile
+git config --list
 
 git pull origin
 
