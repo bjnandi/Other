@@ -27,6 +27,8 @@ git remote add origin https://github.com/bjnandi/git-test.git
 
 git remote remove [remote name]
 vi .git/config
+git config --global --edit
+git config --global --unset core.excludesfile
 
 git pull origin
 
