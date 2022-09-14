@@ -1,4 +1,4 @@
-1) Download SonarQube
+1) Download SonarQube "sonarqube-8.9.9.56886"
 
 2) Unzip SonarQube
 
@@ -18,7 +18,7 @@
 
 9) login User "admin" & Password "admin" & Generate Key Then create a Project "glue"
 
-10) Download SonarQube Scanner & Set path in Environment Variables.
+10) Download SonarQube Scanner & Set path in Environment Variables "sonar-scanner-4.7.0.2747-windows"
 	"C:\Users\nbisw\Desktop\sonar-scanner-4.7.0.2747-windows\bin"
 
 11) Update/Configure Sonar Scanner on Sonar Scanner\conf\sonar-scanner.properties
