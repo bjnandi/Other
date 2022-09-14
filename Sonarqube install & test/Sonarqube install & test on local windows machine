@@ -1,0 +1,57 @@
+1) Download SonarQube
+
+2) Unzip SonarQube
+
+3) Inside the bin folder, Check Windows installation folder
+
+4) Click the 'StartSonar' bat file to start the SonarQube server
+
+5) To run SonarQube server we must have Java 11 (Download or Check Downloaded) &  Set Java path in Environment Variables.
+	"C:\Users\nbisw\Desktop\jdk-11.0.16.1\bin"
+
+6) Go to the SonarQube folder and find the conf folder. Open the wrapper.conf file in any text editor.
+	Set path -“wrapper.java.command=C:\Users\nbisw\Desktop\jdk-11.0.16.1\bin\java"
+
+7)	Click the 'StartSonar' bat file to start the SonarQube server Again
+'
+8) Browsec to Check http://localhost:9000/
+
+9) login User "admin" & Password "admin" & Generate Key Then create a Project "glue"
+
+10) Download SonarQube Scanner & Set path in Environment Variables.
+	"C:\Users\nbisw\Desktop\sonar-scanner-4.7.0.2747-windows\bin"
+
+11) Update/Configure Sonar Scanner on Sonar Scanner\conf\sonar-scanner.properties
+	sonar.host.url=http://localhost:9000
+	sonar.sourceEncoding=UTF-8
+	sonar.projectKey=glue
+	sonar.sources=C:\Users\nbisw\Desktop\glue-laravel-bc
+
+12) Create a new file On laravel root folder & update file "sonar-project.properties"
+
+	# must be unique in a given SonarQube instance
+	sonar.projectKey= glue
+	sonar.projectName= glue
+	sonar.login= c316570bfbfa3e96404b1f9995ce8595ca7fb822
+	sonar.projectVersion=1.0.0
+
+	# Path to the parent source code directory.
+
+	sonar.sources=app
+
+	# Language
+	# We’ve commented this out, because we want to analyze both PHP and Javascript
+
+	sonar.language=php
+
+	# Encoding of the source code
+
+	sonar.sourceEncoding=UTF-8
+	sonar.exclusions=app/Providers/**, vendor/**
+
+
+13) Open the command prompt on laravel root folder & Run
+	C:\Users\nbisw\Desktop\sonar-scanner-4.7.0.2747-windows\bin\sonnar-scanner  or "sonar-scanner.bat"
+
+14) View Result in SonarQube Admin Page
+	Check the result in http://localhost:9000/glue
