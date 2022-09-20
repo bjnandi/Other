@@ -68,3 +68,7 @@
 
 27) docker inspect db_name
 
+docker volume create test
+docker volume ls
+docker volume rm test
+docker volume inspect test
