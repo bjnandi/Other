@@ -72,3 +72,4 @@ docker volume create test
 docker volume ls
 docker volume rm test
 docker volume inspect test
+ docker run -itd --name st123  -v myvol:/app staticsite01
