@@ -68,6 +68,8 @@
 
 27) docker inspect db_name
 
+28) docker tag cv:latest bjnandi/cv:latest
+
 docker volume create test
 docker volume ls
 docker volume rm test
