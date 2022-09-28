@@ -1,0 +1,24 @@
+kubectl create namespace eks-sample-app
+kubectl get namespace
+
+
+eksctl create cluster --name my-cluster --region ap-south-1 --fargate
+kubectl get all 
+kubectl get node
+kubectl get pod
+kubectl get svc
+
+kubectl get pod -o wide
+kubectl get node -o wide
+
+kubectl describe svc {svc-name}
+kubectl describe pod {pod-name}
+
+kubectl get svc --all-namespaces
+kubectl delete svc service-name
+eksctl delete cluster --name my-cluster
+kubectl logs {pod-name}
+
+kubectl delete deploy my-nginx
+
+kubectl expose deployment hello-world --type=NodePort --name=example-service
