@@ -7,6 +7,7 @@ kubectl get all
 kubectl get node
 kubectl get pod
 kubectl get svc
+kubectl get secrets
 
 kubectl get pod -o wide
 kubectl get node -o wide
