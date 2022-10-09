@@ -23,3 +23,8 @@ kubectl logs {pod-name}
 kubectl delete deploy my-nginx
 
 kubectl expose deployment hello-world --type=NodePort --name=example-service
+
+
+aws ecr get-login-password --region ap-south-1 
+$TOKEN= PW
+kubectl create secret docker-registry glue --docker-server=account_id.dkr.ecr.ap-south-1.amazon36aws.com --docker-username=AWS --docker-password=$TOKEN
