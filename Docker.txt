@@ -70,6 +70,8 @@
 
 28) docker tag cv:latest bjnandi/cv:latest
 
+29) docker system prune -a
+
 docker volume create test
 docker volume ls
 docker volume rm test
