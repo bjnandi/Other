@@ -25,6 +25,7 @@
 25) exit
 26) sudo apt-get install tzdata
 27) sudo ufw app list
+28) hostname -I
 
 / root
 ~ tilde
