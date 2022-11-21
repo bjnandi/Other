@@ -1,0 +1,226 @@
+# Lab 1 - HCL Basics
+resource "local_file" "pets" {
+    filename = "pets.txt"
+    content = "I love Pets!"
+}
+
+
+# Lab 2 - Update and Destroy Infrastructure in Terraform
+resource "local_file" "pets" {
+    filename = "pets.txt"
+    content = "we love!TF"
+    file_permission = "0700"
+}
+terraform destroy
+
+# Lab 3 - Terraform Providers in Terraform
+
+terraform init 
+
+# Lab 4 - Multiple Providers in Terraform
+terraform init 
+resource "local_file" "pet" {
+    filename = "pets.text"
+    content = "we love pets!!!!"
+}
+
+resource "random_pet" "my-pet" {
+    prefix = "mrs"
+    separator =  "."
+    length = "13"  
+  
+}
+
+# Lab 5 - Input Variables in Terraform +
+# Lab 6 - Using Variables in Terraform
+resource "local_file" "pet" {
+    filename = var.filename
+    content = var.content
+}
+
+resource "random_pet" "my-pet" {
+    prefix = var.prefix
+    separator =  var.separator
+    length = var.length  
+  
+}
+####== variable.tf ==##############
+
+variable "filename" {
+  default = "pets.text"
+}
+variable "content" {
+  default =  "we love Bangladesh!"
+  
+}
+variable "prefix" {
+  default = "Mr"
+
+}
+variable "separator" {
+  default = "."
+}
+variable "length" {
+  default = "1"
+}
+#################################
+
+
+resource "local_file" "pets" {
+    filename = var.filename
+    content = var.content["statement2"]
+}
+
+# Lab 7 - Resource Attribute Reference in Terraform
+resource "local_file" "pet" {
+    filename = var.filename
+    content = "My favorite pet is ${random_pet.my-pet.id}"
+}
+
+resource "random_pet" "my-pet" {
+    prefix = var.prefix
+    separator =  var.separator
+    length = var.length  
+  
+}
+
+# Lab 8 - Resource Dependencies in Terraform
+resource "local_file" "pet" {
+    filename = var.filename
+    content = "My favorite pet is ${random_pet.my-pet.id}"
+
+    depends_on = [
+      random_pet.my-pet
+    ]
+}
+
+resource "random_pet" "my-pet" {
+    prefix = var.prefix
+    separator =  var.separator
+    length = var.length  
+  
+}
+
+# Lab 9 - Output Variables in Terraform
+output pet-name {
+  value = random_pet.my-pet.id
+  description = "Output the value"
+}
+
+# Lab 10 - Purpose of State in Terraform
+resource "local_file" "pet" {
+    filename = "pets.txt"
+    content = "My favorite pet is ${random_pet.my-pet.id}"
+
+}
+
+resource "random_pet" "my-pet" {
+    length = 1 
+}
+
+resource "random_pet" "cat" {
+    filename = "cat.txt"
+    content = "I like cats too!" 
+}
+
+# Lab 11 - Terraform Commands
+# terraform init 
+# terraform plan
+# terraform apply  
+# terraform destroy
+# terraform apply -var "filename=pets2.text"
+# terraform validate 
+# terraform show
+# terraform show -json
+# terraform fmt
+# terraform providers
+# terraform output
+# terraform refresh
+# terraform graph
+
+# Mutable vs Immutable Infrastructure
+Mutable = Created a web server and deployed it on existing mutable infrastructure
+Immutable = “Immutable” is the state of being unchangeable. It’s an antonym to mutable, which means that on this end, the infrastructure cannot be modified
+ once deployed. When changes are necessary, you need to deploy afresh, add infrastructure, and decommission old infrastructure.
+
+# Lab 12 - Lifecycle Rules in Terraform
+
+resource "local_file" "pets" {
+    filename = "pets.txt"
+    content = "we love!TF"
+    file_permission = "0700"
+
+    lifecycle {
+      create_before_destroy = true
+    }
+}
+------------------------------------------
+
+resource "local_file" "pets" {
+    filename = "pets.txt"
+    content = "we love!TF"
+    file_permission = "0700"
+
+    lifecycle {
+      prevent_destroy = true
+    }
+}
+
+------------------------------------------
+
+resource "aws_instance" "test" {
+  ami   = "ami-062df10d14676e201"
+  instance_type =  "t2.micro"
+  subnet_id = "subnet-016875cc812b02b0b"
+  tags = {
+    Name = "ProjectA-Webserver"
+  }
+  lifecycle{
+    ignore_changes = [
+      tags
+    ]
+  }
+}
+
+# Lab 13 - Data Sources in Terraform
+resource "local_file" "pets" {
+    filename = "pets.txt"
+    content = data.local_file.dog.content
+}
+data "local_file" "dog"{
+  filename = "dog.txt"
+}
+
+
+# Lab 14 - Use of for_each meta arguments in Terraform
+resource "local_file" "pet" {
+    #filename = var.filename[count.index]
+    #count = length(var.filename)
+    filename = each.value
+    #for_each = toset(var.filename)
+    for_each = var.filename
+}
+##############= variables.tf =###############
+variable "filename" {
+ # type=list(string)
+ type=set(string)
+  default = [
+    "pets.txt",
+    "dogs.txt",
+    "cats.txt"
+  ]
+}
+
+-------------------------------------------------------
+
+terraform {
+  required_providers {
+    local = {
+      source  = "hashicorp/local"
+      version = "~> 1.4.0"
+    }
+  }
+}
+
+
+# https://www.youtube.com/watch?v=YcJ9IeukJL8
