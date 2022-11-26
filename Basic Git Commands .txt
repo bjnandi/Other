@@ -74,4 +74,8 @@ CodeCommit SSH connection
 10) git commit -m "First release of Hello World!"
 11) git push -u origin main
 
-
+-----------------codecommit on docker build----------------
+git config --system credential.UseHttpPath true
+git config --system user.email "me@alexanderhose.com"
+git config --system user.name "alexanderhose"
+git clone https://git-codecommit.us-east-2.amazonaws.com/v1/repos/ssrf
