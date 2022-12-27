@@ -45,6 +45,14 @@ rm -r test
 rm -rf cv
 shtudown -h now
 
+
+sudo apachectl stop
+sudo service nginx start
+sudo service nginx stop 
+sudo service nginx start 
+sudo service nginx restart
+sudo service nginx reload
+
 COPY .  /var/www/html/
 
  ssh -i LightsailDefaultKey-ap-south-1.pem ubuntu@35.154.21.241
