@@ -39,9 +39,6 @@ git push origin --force master
 git log --oneline
 git branch –d test
 
- sudo apachectl stop
- sudo service nginx start
-
 ====================================================================================
 CodeCommit HTTPS connection
 -------------------------------
