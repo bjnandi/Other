@@ -27,6 +27,7 @@
 27) sudo ufw app list
 28) hostname -I
 29) find . -name my-file
+30) wc index.html (Word count [line, Word, file_size])
 
 / root
 ~ tilde
