@@ -51,6 +51,16 @@ COPY .  /var/www/html/
 
  ssh -i LightsailDefaultKey-ap-south-1.pem ubuntu@35.154.21.241
  
+ 
+Disk 
+-------------
+df -H
+lsblk 
+sudo mount /dev/xvdf  test
+sudo mkfs -t ext4 /dev/xvdf
+sudo umount /dev/xvdf
+
+
 Remort login
 --------------------------------
 sudo apt install openssh-server
