@@ -32,3 +32,5 @@
  FLUSH PRIVILEGES;
  
 sudo apt-get remove --purge mysql*
+
+https://www.digitalocean.com/community/tutorials/how-to-move-a-mysql-data-directory-to-a-new-location-on-ubuntu-20-04
