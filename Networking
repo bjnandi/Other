@@ -1,0 +1,5 @@
+# Show Save Wifi Password on windows
+## open cmd in admin mode
+
+1) netsh wlan show profile
+2) netsh wlan export profile folder=C:\ key=clear
