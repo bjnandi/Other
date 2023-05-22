@@ -46,6 +46,7 @@ rm -r test
 rm -rf cv
 shtudown -h now
 
+nc -zv localhost 3306
 
 COPY .  /var/www/html/
 
