@@ -14,7 +14,7 @@ vagrant ssh
 ```
 
 
-
+```
 
 All this started after I added these settings (in Vagrantfile):
 
@@ -22,3 +22,4 @@ config.ssh.username = "vagrant"
 config.ssh.password = "vagrant"
 config.ssh.keys_only = true
 config.ssh.insert_key = true
+```
