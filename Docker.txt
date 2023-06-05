@@ -72,6 +72,8 @@
 
 29) docker system prune -a
 
+30) sudo docker builder prune
+
 docker volume create test
 docker volume ls
 docker volume rm test
