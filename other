@@ -1,0 +1,2 @@
+# asus keyboard backlight Ubuntu
+sudo /etc/acpi/asus-keyboard-backlight.sh
