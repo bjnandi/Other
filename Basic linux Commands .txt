@@ -28,6 +28,13 @@
 28) hostname -I
 29) find . -name my-file
 30) wc index.html (Word count [line, Word, file_size])
+31) useradd test
+32) passwd test
+33) hostname
+34) cat /etc/passwd | grep -i bjnandi
+35) cat /etc/passwd | grep -i bj*
+36) chown
+37) chmode
 
 / root
 ~ tilde
