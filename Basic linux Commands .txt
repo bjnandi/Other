@@ -14,7 +14,7 @@
 14) ".." back dir
 15) man
 16) who
-17) whcich 
+17) which 
 18) whoami
 19) date
 20) cal
