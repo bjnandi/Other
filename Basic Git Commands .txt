@@ -20,6 +20,10 @@ git merge hello-world-images
 git branch -d hello-world-images
 git status
 
+ git revert <commit>
+ 
+ git clone --branch <branchname> <remote-repo-url>
+
 git clone --branch <branchname> <remote-repo-url>
 
 git remote -v
