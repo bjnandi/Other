@@ -74,6 +74,12 @@
 
 30) sudo docker builder prune
 
+
+docker rm -f containder_id
+
+docker build -t myapp:v1 . --no-cache
+
+
 docker volume create test
 docker volume ls
 docker volume rm test
