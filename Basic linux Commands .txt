@@ -58,7 +58,7 @@ nc -zv localhost 3306
 COPY .  /var/www/html/
 
  ssh -i LightsailDefaultKey-ap-south-1.pem ubuntu@35.154.21.241
- 
+ sudo !!
  
 Disk 
 -------------
