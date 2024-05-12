@@ -78,3 +78,12 @@ cd /home/bjnandi/.ssh
 ssh-copy-id  bjnandi@192.168.0.4
 ssh bjnandi@192.168.0.4
 exit
+
+ProxyCommand ssh
+alias k='sudo kubectl'
+alias c='clear'
+
+docker context use default
+echo -n "admin123" | base64
+echo -n "YWRtaW4xMjM=" | base64 --decode
+
