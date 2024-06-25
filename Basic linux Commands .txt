@@ -35,6 +35,8 @@
 35) cat /etc/passwd | grep -i bj*
 36) chown
 37) chmode
+38) df -h
+39) lsblk
 
 / root
 ~ tilde
