@@ -19,6 +19,15 @@ git checkout master
 git merge hello-world-images
 git branch -d hello-world-images
 git status
+git checkout -b main
+git commit -am "update"
+git diff
+git logs --oneline
+git checkout file.txt
+git rm file.txt
+git reset HEAD file.txt
+git checkout file.txt
+git reset --hard HEAD^
 
  git revert <commit>
  
@@ -83,3 +92,17 @@ git config --system credential.UseHttpPath true
 git config --system user.email "me@alexanderhose.com"
 git config --system user.name "alexanderhose"
 git clone https://git-codecommit.us-east-2.amazonaws.com/v1/repos/ssrf
+
+
+## Markdown cheat sheet
+<details> <summary> My todo List <summary>
+- Headding
+1. Headding
+- [] list
+-[x] Headding
+
+![Title](url)
+
+<details>
+----------------------------------------
+gise
