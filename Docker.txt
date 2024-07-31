@@ -74,6 +74,7 @@
 
 30) sudo docker builder prune
 
+31) docker save -o test.tar my-cv
 
 docker rm -f containder_id
 
