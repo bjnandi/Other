@@ -70,6 +70,7 @@ sudo mount /dev/xvdf  test
 sudo mkfs -t ext4 /dev/xvdf
 sudo umount /dev/xvdf
 
+scp -i ec2key.pem username@ec2ip:/remote/path/to/file /local/path/to/file
 
 Remort login
 --------------------------------
