@@ -43,6 +43,10 @@ sudo kubectl -n kube-system rollout restart deployment coredns
 
 kubectl drain --ignore-daemonsets ip-172-31-61-162<node name / ip>
 kubectl uncordon ip-172-31-41-21 <node name / ip>
+
+
+kubectl taint nodes ip-172-31-5-4 dedicated=special-user:NoSchedule
+
 POD_NAME="$(kubectl get pod -l app.kubernetes.io/name=grafana -o jsonpath='{.items[0].metadata.name}')" kubectl --namespace default port-forward $POD_NAME 3000
 Kevin Friedman
 kubectl set image deployment/server server=bjnandi/ci-cd-mern-k3s-backend:v1.0.1
