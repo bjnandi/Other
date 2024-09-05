@@ -10,7 +10,7 @@ psql -h postgresql.default.svc.cluster.local -U postgres -d db_name -p 5432
 
 ### Create the database if it doesn't already exist
 ```
-    CREATE DATABASE database_name;
+CREATE DATABASE database_name;
 ```
 ### See Database
 ```
