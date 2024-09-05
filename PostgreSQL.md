@@ -50,7 +50,7 @@ psql -U [username] -h [host] -p [port] -d [target_database] -f backup.sql
 ```
 ### Restoring from a Custom Format with pg_restore
 ```
-Restoring from a Custom Format with pg_restore
+pg_restore -U [username] -h [host] -p [port] -d [target_database] -Fc backup.dump
 ```
 
 ### More Details 
