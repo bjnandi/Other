@@ -16,6 +16,9 @@ kubectl get node -o wide
 # pod waiting
 sudo kubectl get pods -w
 
+kubectl rollout restart deployment py-app
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+
 kubectl describe svc {svc-name}
 kubectl describe pod {pod-name}
 kubectl logs {pod-name}
