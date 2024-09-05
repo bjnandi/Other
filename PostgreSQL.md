@@ -38,5 +38,20 @@ psql
 ```
 \q
 ```
+### Backing Up a Single Database to a SQL File
+```
+pg_dump -U [username] -h [host] -p [port] [database_name] > backup.sql
+
+```
+
+### Restoring a Database with psql
+```
+psql -U [username] -h [host] -p [port] -d [target_database] -f backup.sql
+```
+### Restoring from a Custom Format with pg_restore
+```
+Restoring from a Custom Format with pg_restore
+```
+
 ### More Details 
 https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-22-04-quickstart
