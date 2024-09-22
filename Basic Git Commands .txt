@@ -51,6 +51,7 @@ git push origin
 git push origin --force master
 
 git log --oneline
+git log
 git branch –d test
 
 ====================================================================================
