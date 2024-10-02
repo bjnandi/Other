@@ -90,3 +90,7 @@ docker context use default
 echo -n "admin123" | base64
 echo -n "YWRtaW4xMjM=" | base64 --decode
 
+Get the public key from the new key pair:
+```
+ssh-keygen -y -f new-key.pem
+```
