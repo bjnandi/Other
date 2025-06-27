@@ -41,6 +41,12 @@
 / root
 ~ tilde
 
+df -hT
+du -h -d 1 /home
+sudo du -sh /var/lib/* | sort -hr | head -10
+du -sh ./*
+sudo find /var/lib/docker/containers/ -name "*.log" -exec du -h {} + | sort -hr | head -10
+
 zip cloud-function.zip requirements.txt main.py
 curl ifconfig.me
 lsblk
