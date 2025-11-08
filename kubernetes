@@ -55,4 +55,7 @@ POD_NAME="$(kubectl get pod -l app.kubernetes.io/name=grafana -o jsonpath='{.ite
 Kevin Friedman
 kubectl set image deployment/server server=bjnandi/ci-cd-mern-k3s-backend:v1.0.1
 
-
+kubectl config get-contexts
+kubectl config use-context <name>
+kubectl config current-context
+kubectl get pods --all-namespaces
