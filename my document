@@ -1,0 +1,5 @@
+IncludeOpForFullLoad=false;IncludeTableHeader=true;CsvDelimiter=,;CsvRowDelimiter=\n;
+
+addColumnName=true;
+
+step 2 : Add tables using crawler
