@@ -1,0 +1,8 @@
+screen -ls
+cat .env
+screen ls
+
+source venv/bin/activate
+ls
+python3 test.py
+
