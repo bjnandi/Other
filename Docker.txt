@@ -76,6 +76,18 @@
 
 31) docker save -o test.tar my-cv
 
+32) docker image prune -a
+33) logging:
+   		 driver: none 
+
+34) docker stats
+
+35) docker cp sso-login-v6.13 keycloak:/opt/keycloak/themes/
+
+36) docker stop $(docker ps -q)
+
+
+
 docker rm -f containder_id
 
 docker build -t myapp:v1 . --no-cache
@@ -95,4 +107,5 @@ docker run -itd --name st123  -v myvol:/app staticsite01
 docker run -d    -it   --name devtest   --mount source=myvol2,target=/app  nginx:latest
 docker run -d   -it   --name devtest34   --mount type=bind,source="$(pwd)"/target,target=/app   nginx:latest
 docker run -d   -it   --name tmptest1   --mount type=tmpfs,destination=/app   nginx:latest
+
 
