@@ -1,0 +1,18 @@
+# Mongodb backup/ restore
+mongodump --out /backup/mongobackup_$(date +%F) \
+  --username admin \
+  --password mongo123! \
+  --authenticationDatabase admin
+
+
+
+# Check active servies list
+systemctl list-units --type=service --state=active
+
+# Clear buff/cache
+free -mh
+sudo sync; echo 1 | sudo tee /proc/sys/vm/drop_cache
+
+
+# Remove/ small  log file
+truncate -s 5G /docker-root-dir/containers/02f6badebe5a6b6df3d65749521d3547a9e91c53c21c65f62b91aa9c3efe9c19/02f6badebe5a6b6df3d65749521d3547a9e91c53c21c65f62b91aa9c3efe9c19-json.log
