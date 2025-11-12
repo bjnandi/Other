@@ -16,3 +16,23 @@ sudo sync; echo 1 | sudo tee /proc/sys/vm/drop_cache
 
 # Remove/ small  log file
 truncate -s 5G /docker-root-dir/containers/02f6badebe5a6b6df3d65749521d3547a9e91c53c21c65f62b91aa9c3efe9c19/02f6badebe5a6b6df3d65749521d3547a9e91c53c21c65f62b91aa9c3efe9c19-json.log
+
+
+sudo du -h --max-depth=1 /docker-root-dir/overlay2/cd0227d1aa87c97bbc456400f3eea2d5b13dbd5a42aad8bb9d24ed3b9e807137 | sort -h
+
+df -hT
+
+
+
+ip link sh;ip -br add sh;ip route sh
+sudo iptables -L -n -v
+
+traceroute  10.33.11.4 9093
+ 
+# Search keywork
+grep -R "finify" .
+
+
+netstat -tulnp
+ 
+sudo unlink /etc/nginx/sites-enabled/middleware.dev-sheba.xyz.conf
