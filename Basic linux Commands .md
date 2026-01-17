@@ -38,6 +38,8 @@
 38) df -h
 39) lsblk
 
+40) nc -v 103.228.120.126 443
+
 / root
 ~ tilde
 
@@ -100,3 +102,4 @@ Get the public key from the new key pair:
 ```
 ssh-keygen -y -f new-key.pem
 ```
+
